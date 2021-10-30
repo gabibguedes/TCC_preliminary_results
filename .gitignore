@@ -1,5 +1,3 @@
 .DS_Store
 .env
-tables/QueryResults1.csv
-tables/QueryResults2.csv
-tables/QueryResults3.csv
+tables/

@@ -4,7 +4,7 @@ Notebooks for the data analysis of the Stack Overflow posts on the react-native 
 
 ## Execute notebooks
 
-To execute the notebooks use the command bellow:
+To execute the notebooks, unzip  `tables.zip` and use the command bellow to run the jupyter lab on docker:
 
 ```
 docker-compose up
