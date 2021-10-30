@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:13.1
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    restart: always
+    env_file: .env
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+    ports:
+      - 5432:5432
+
+  notebooks:
+    container_name: notebooks
+    build: ./notebooks
+    ports:
+      - 8888:8888
+      - 40000:40000
+    env_file: .env
+    volumes:
+      - ./notebooks:/notebooks
+      - ./tables:/tables
