@@ -3,3 +3,6 @@ python-decouple
 psycopg2-binary
 psycopg2
 dtale
+whatlies[all]
+human-learn
+wordcloud
