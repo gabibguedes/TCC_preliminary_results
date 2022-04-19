@@ -1,4 +1,4 @@
-# TCC
+# TCC - Preliminary Results
 
 This study analyzes the React Native community and the questions made on Stack Overflow about the React Native. The primary analysis is made with Jupyter notebooks using the Stack Overflow data collected from Stack Exchange Data Explorer.
 
